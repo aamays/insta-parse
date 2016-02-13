@@ -89,7 +89,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GramTableViewCell" rowHeight="474" id="9CP-a4-XFQ" customClass="GramTableViewCell" customModule="InstaParse" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GramTableViewCell" rowHeight="474" id="9CP-a4-XFQ" customClass="GramTableViewCell" customModule="InstaParse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="474"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9CP-a4-XFQ" id="tzz-23-3D4">

@@ -17,6 +17,7 @@
 		AC69D9761C543DB0008796E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69D9751C543DB0008796E4 /* HomeViewController.swift */; };
 		AC7A85D21C6E408D0062175E /* GramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A85D11C6E408D0062175E /* GramTableViewCell.swift */; };
 		AC7A85D61C6E877E0062175E /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A85D51C6E877E0062175E /* DateUtils.swift */; };
+		AC7A85D81C6FA88E0062175E /* InstagramApp.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC7A85D71C6FA88E0062175E /* InstagramApp.gif */; };
 		ACEEBDE11C541BA900DB1A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEEBDE01C541BA900DB1A7B /* AppDelegate.swift */; };
 		ACEEBDE61C541BA900DB1A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEEBDE41C541BA900DB1A7B /* Main.storyboard */; };
 		ACEEBDE81C541BA900DB1A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEEBDE71C541BA900DB1A7B /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		AC69D9751C543DB0008796E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AC7A85D11C6E408D0062175E /* GramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GramTableViewCell.swift; path = Views/GramTableViewCell.swift; sourceTree = "<group>"; };
 		AC7A85D51C6E877E0062175E /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateUtils.swift; path = Utilities/DateUtils.swift; sourceTree = "<group>"; };
+		AC7A85D71C6FA88E0062175E /* InstagramApp.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = InstagramApp.gif; sourceTree = "<group>"; };
 		ACEEBDDD1C541BA900DB1A7B /* InstaParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEEBDE01C541BA900DB1A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACEEBDE51C541BA900DB1A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		ACEEBDD41C541BA800DB1A7B = {
 			isa = PBXGroup;
 			children = (
+				AC7A85D71C6FA88E0062175E /* InstagramApp.gif */,
 				ACEEBDDF1C541BA900DB1A7B /* InstaParse */,
 				ACEEBDDE1C541BA900DB1A7B /* Products */,
 				EBE0861D2FA63E7A906091C1 /* Pods */,
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACEEBDEB1C541BA900DB1A7B /* LaunchScreen.storyboard in Resources */,
+				AC7A85D81C6FA88E0062175E /* InstagramApp.gif in Resources */,
 				AC2378991C6D9D1E00E6B312 /* images.jpeg in Resources */,
 				ACEEBDE81C541BA900DB1A7B /* Assets.xcassets in Resources */,
 				AC23789D1C6DB5A000E6B312 /* insta-gram.ttf in Resources */,

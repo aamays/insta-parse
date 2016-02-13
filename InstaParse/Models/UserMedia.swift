@@ -11,7 +11,7 @@ import Parse
 
 class UserMedia: NSObject {
 
-    // MARK: Constants
+    // MARK: - Constants
     static let ObjectName = "UserMedia"
     struct Fields {
         static let OjbectId = "objectId"
@@ -22,11 +22,11 @@ class UserMedia: NSObject {
         static let MediaAuthor = "author"
         static let CreatedAt = "createdAt"
     }
-    
-    // MARK: Properties
+
+    // MARK: - Stored Properties
     private var mediaObject: PFObject
 
-
+    // MARK: Computed Properties
     var likesCount: Int {
         if let count = mediaObject[Fields.LikesCount] as? Int {
             return count
@@ -46,6 +46,12 @@ class UserMedia: NSObject {
         return mediaObject[Fields.Caption] as? String
     }
 
+    // MARK: - Initializer
+    init(userMediaObj: PFObject) {
+        mediaObject = userMediaObj
+    }
+
+    // MARK: - Instance Methods
     func setMediaOnImageView(imageView: UIImageView) {
         if let mediaFile = mediaObject[Fields.Media] as? PFFile {
             mediaFile.getDataInBackgroundWithBlock({ (data: NSData?, error: NSError?) -> Void in
@@ -56,10 +62,15 @@ class UserMedia: NSObject {
         }
     }
 
-    init(userMediaObj: PFObject) {
-        mediaObject = userMediaObj
-    }
+    // MARK: - Class Methods
 
+    /**
+    Method to post user media to Parse by uploading image file
+
+    - parameter image: Image that the user wants upload to parse
+
+    - returns: PFFile for the the data in the image
+    */
     class func getPFFileFromImage(image: UIImage?) -> PFFile? {
         if let image = image, let imageData = UIImagePNGRepresentation(image) {
             return PFFile(name: "image.png", data: imageData)
@@ -67,6 +78,13 @@ class UserMedia: NSObject {
         return nil
     }
 
+    /**
+    Method to post user media to Parse by uploading image file
+ 
+    - parameter image: Image that the user wants upload to parse
+    - parameter caption: Caption text input by the user
+    - parameter completion: Block to be executed after save operation is complete
+     */
     class func postUserImage(image: UIImage?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
         let media = PFObject(className: UserMedia.ObjectName)
         media[Fields.Media] = getPFFileFromImage(image)

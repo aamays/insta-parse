@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var gramsTableView: UITableView!
 
+    var refreshControl: UIRefreshControl!
     var postedGrams: [UserMedia]? {
         didSet {
             gramsTableView?.reloadData()
@@ -26,6 +27,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         title = "Home"
         gramsTableView.delegate = self
         gramsTableView.dataSource = self
+
+        // initialize refresh control view
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+
+        // add refresh control to the table view
+        gramsTableView.addSubview(refreshControl)
+
+        // update table
         updateGramsTable()
     }
 
@@ -54,10 +65,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     print(m.likesCount)
                 }
                 self.postedGrams = media
+                self.refreshControl.endRefreshing()
             } else {
                 print(error?.localizedDescription)
             }
         }
+    }
+
+    func refresh(refControl: AnyObject?) {
+        updateGramsTable()
     }
 
     /*
