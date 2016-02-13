@@ -14,6 +14,7 @@ class GramTableViewCell: UITableViewCell {
     @IBOutlet weak var gramAuthorUsername: UILabel!
     @IBOutlet weak var likesCount: UILabel!
     @IBOutlet weak var postedAgoTimeLabel: UILabel!
+    @IBOutlet weak var captionLabel: UILabel!
 
     var gramMedia: UserMedia! {
         didSet {
@@ -36,7 +37,7 @@ class GramTableViewCell: UITableViewCell {
         } else {
             postedAgoTimeLabel?.text = ""
         }
-        
+        captionLabel?.text = gramMedia.mediaCaption
         gramMedia.setMediaOnImageView(gramImage)
     }
 

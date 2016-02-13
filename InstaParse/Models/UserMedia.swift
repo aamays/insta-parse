@@ -42,7 +42,10 @@ class UserMedia: NSObject {
         return mediaObject.createdAt
     }
     
-    
+    var mediaCaption: String? {
+        return mediaObject[Fields.Caption] as? String
+    }
+
     func setMediaOnImageView(imageView: UIImageView) {
         if let mediaFile = mediaObject[Fields.Media] as? PFFile {
             mediaFile.getDataInBackgroundWithBlock({ (data: NSData?, error: NSError?) -> Void in
